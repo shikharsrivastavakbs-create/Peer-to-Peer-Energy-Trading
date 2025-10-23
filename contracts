@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+/**
+ * @title Peer-to-Peer Energy Trading
+ * @dev A simple implementation of decentralized energy trading between prosumers (sellers) and consumers (buyers).
+ */
+
+contract PeerToPeerEnergyTrading {
+    
+    // Structure for energy trade offer
+    struct Trade {
+        address seller;
+        address buyer;
+        uint256 energyAmount; // in kWh
+        uint256 pricePerUnit; // price per kWh in wei
+        bool completed;
+    }
