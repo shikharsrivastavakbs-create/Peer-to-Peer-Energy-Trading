@@ -16,3 +16,10 @@ contract PeerToPeerEnergyTrading {
         uint256 pricePerUnit; // price per kWh in wei
         bool completed;
     }
+
+  // Array to store trades
+    Trade[] public trades;
+
+    // Mapping to track balances (simulating energy token balances)
+    mapping(address => uint256) public energyBalance;
+    mapping(address => uint256) public etherBalance;
