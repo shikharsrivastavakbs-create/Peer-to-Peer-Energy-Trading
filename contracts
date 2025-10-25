@@ -23,3 +23,9 @@ contract PeerToPeerEnergyTrading {
     // Mapping to track balances (simulating energy token balances)
     mapping(address => uint256) public energyBalance;
     mapping(address => uint256) public etherBalance;
+
+// Events for transparency
+    event TradeCreated(uint256 tradeId, address indexed seller, uint256 energyAmount, uint256 pricePerUnit);
+    event TradeCompleted(uint256 tradeId, address indexed buyer, uint256 totalCost);
+    event EnergyAdded(address prosumer, uint256 amount);
+    event EnergyConsumed(address consumer, uint256 amount);
