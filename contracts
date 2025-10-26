@@ -29,3 +29,11 @@ contract PeerToPeerEnergyTrading {
     event TradeCompleted(uint256 tradeId, address indexed buyer, uint256 totalCost);
     event EnergyAdded(address prosumer, uint256 amount);
     event EnergyConsumed(address consumer, uint256 amount);
+
+/**
+     * @dev Prosumers can add energy they want to sell
+     */
+    function addEnergy(uint256 amount) public {
+        require(amount > 0, "Energy amount must be greater than zero");
+        energyBalance[msg.sender] += amount;
+        emit EnergyAdded(msg.sender, amount);
