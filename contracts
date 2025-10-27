@@ -37,3 +37,11 @@ contract PeerToPeerEnergyTrading {
         require(amount > 0, "Energy amount must be greater than zero");
         energyBalance[msg.sender] += amount;
         emit EnergyAdded(msg.sender, amount);
+
+}
+
+    /**
+     * @dev Seller creates a new trade offer
+     */
+    function createTrade(uint256 energyAmount, uint256 pricePerUnit) public {
+        require(energyBalance[msg.sender] >= energyAmount, "Not enough energy available to sell");
