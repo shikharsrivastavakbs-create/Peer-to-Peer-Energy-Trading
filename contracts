@@ -45,3 +45,13 @@ contract PeerToPeerEnergyTrading {
      */
     function createTrade(uint256 energyAmount, uint256 pricePerUnit) public {
         require(energyBalance[msg.sender] >= energyAmount, "Not enough energy available to sell");
+ trades.push(Trade({
+            seller: msg.sender,
+            buyer: address(0),
+            energyAmount: energyAmount,
+            pricePerUnit: pricePerUnit,
+            completed: false
+        }));
+        emit TradeCreated(trades.length - 1, msg.sender, energyAmount, pricePerUnit);
+    }
+
