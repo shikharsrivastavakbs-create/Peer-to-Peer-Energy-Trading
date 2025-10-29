@@ -55,3 +55,6 @@ contract PeerToPeerEnergyTrading {
         emit TradeCreated(trades.length - 1, msg.sender, energyAmount, pricePerUnit);
     }
 
+ /**
+     * @dev Buyer purchases energy from an active trade
+     */
