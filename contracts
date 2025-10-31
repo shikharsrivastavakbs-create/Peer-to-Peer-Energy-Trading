@@ -58,3 +58,6 @@ contract PeerToPeerEnergyTrading {
  /**
      * @dev Buyer purchases energy from an active trade
      */
+ function buyEnergy(uint256 tradeId) public payable {
+        require(tradeId < trades.length, "Invalid trade ID");
+        Trade storage t = trades[tradeId];
