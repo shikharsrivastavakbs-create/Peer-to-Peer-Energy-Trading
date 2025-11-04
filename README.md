@@ -71,3 +71,6 @@ Dynamic demand-response-based pricing models.
 
 Support for cross-grid and larger microgrid networks.
 ![WhatsApp Image 2025-11-04 at 18 47 14_24a2d6db](https://github.com/user-attachments/assets/d70b78c1-79b6-4151-9a04-130cb635ac41)
+
+
+0x6412765A4053272Da94935E9Dc05507AAE8b012A
